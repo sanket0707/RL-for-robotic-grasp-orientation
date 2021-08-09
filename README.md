@@ -11,11 +11,12 @@ gym.make('CartPole-v0')
 gym.make('Breakout-v0') # to test Atari environment
 gym.make('LunarLander-v2') # to test Box2D environment
 
-## Finalized project
+# Finalized project
 import gym
 from gym import envs
 print(envs.registry.all())
-# Create an environment
+
+## Create an environment
 env = gym.make("HandManipulateEggRotate-v0")
 
 max_ep = 10 # maximum number of episodes to loop over
@@ -43,7 +44,7 @@ state = env.reset()
 action = env.action_space.sample() # similar to having a random agent, i.e., an agent that performs only random actions and does not learn anything
 next_state, reward, done, info = env.step(action)
 
-# to observe the information captured in each of the variables
+# To observe the information captured in each of the variables
 print('State: '.format(state))
 print('Action: '.format(action))
 print('Next state: {}; Reward: {}; Done: {}; Info: {}'.format(next_state, reward, done, info))
